@@ -33,7 +33,7 @@
                     </Style>
                 </DatePicker.CalendarStyle>
             </DatePicker>
-            <ComboBox x:Name="NewsPreview" SelectedIndex="0"/>
+            <ComboBox x:Name="NewsPreview" SelectedIndex="0" MaxWidth="650"/>
         </Menu>
         <ListView x:Name="NewsList" Margin="0,35,0,0" ScrollViewer.CanContentScroll="False" FontSize="24" SelectionMode="Single">
         </ListView>

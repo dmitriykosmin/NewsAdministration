@@ -25,7 +25,7 @@ namespace NewsAdministration
         public static string LinkToServer = "http://127.0.0.1:1848/News";
         public static string Token { get; set; }
         private string JsonString { get; set; }
-        private List<NewsItem> News { get; set; }
+        private IEnumerable<NewsItem> News { get; set; }
         private DateTime CurrentDate { get; set; }
         private NewsView View { get; set; }
         public MainWindow()
@@ -92,11 +92,11 @@ namespace NewsAdministration
         {
             NewsPreview.Items.Clear();
             NewsPreview.Items.Add(new TextBlock(new Run("Быстрое переключение между новостями")));
-            for (int i = 0; i < News.Count; i++)
+            for (int i = 0; i < News.Count(); i++)
             {
                 Button temp = new Button()
                 {
-                    Content = News[i].title,
+                    Content = News.ElementAt(i).title,
                     ClickMode = ClickMode.Release,
                     Name = "button" + i.ToString(),
                     HorizontalAlignment = HorizontalAlignment.Stretch,
