@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="NewsAdministration.Add_NewsItem" BaseTypeListCollapsed="true">
+    <Position X="6" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Add_NewsItem.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NewsAdministration.Change_Password" BaseTypeListCollapsed="true">
+    <Position X="4" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Change_Password.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NewsAdministration.Edit_NewsItem" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Edit_NewsItem.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NewsAdministration.Log_in" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Log_in.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NewsAdministration.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABEAAQAQIQACAAAAAAAAAQgEQABhAAABBAAAgAARAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.192" />
+  </Class>
+  <Class Name="NewsAdministration.NewsItem">
+    <Position X="3.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAQAAAAAAAoAAAAIAAAAEIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NewsItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NewsAdministration.NewsParser">
+    <Position X="0.5" Y="6.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="NewsAdministration.NewsParser.Data">
+        <TypeIdentifier>
+          <NewMemberFileName>NewsParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>NewsParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NewsAdministration.NewsView" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACBAAAAAAAAAAAAAAAAAwAAAAAAAAAAA=</HashCode>
+      <FileName>NewsView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

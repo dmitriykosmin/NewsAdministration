@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsAdministration"
         mc:Ignorable="d"
-        Title="Войдите, используя учётную запись администратора" Height="200" Width="700" FontFamily="Times New Roman" FontSize="18" ResizeMode="CanMinimize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+        Title="Log in using the administrator account" Height="200" Width="700" FontFamily="Times New Roman" FontSize="18" ResizeMode="CanMinimize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Введите логин :" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,76,0,0" TextWrapping="Wrap" Text="Введите пароль :" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Enter login :" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,76,0,0" TextWrapping="Wrap" Text="Enter password :" VerticalAlignment="Top"/>
         <TextBox x:Name="Login" HorizontalAlignment="Stretch" Height="23" Margin="10,35,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <PasswordBox x:Name="Password" HorizontalAlignment="Stretch" Height="23" Margin="10,102,10,0" VerticalAlignment="Top"/>
-        <Button x:Name="LogIn" Content="Войти" HorizontalAlignment="Right" Margin="0,132,10,0" VerticalAlignment="Top" Width="75" Click="LogIn_Click"/>
+        <Button x:Name="LogIn" Content="Log in" HorizontalAlignment="Right" Margin="0,132,10,0" VerticalAlignment="Top" Width="75" Click="LogIn_Click"/>
 
     </Grid>
 </Window>

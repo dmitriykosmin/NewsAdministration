@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Markup;
@@ -46,7 +47,7 @@ namespace NewsAdministration
             {
                 WrapPanel temp = new WrapPanel();
                 temp.Orientation = Orientation.Horizontal;
-                if (item.urlToImage != "")
+                if (!string.IsNullOrEmpty(item.urlToImage))
                 {
                     Image image = DownloadRemoteImageFile(item.urlToImage);
                     if (image != null)
@@ -68,11 +69,20 @@ namespace NewsAdministration
                 Hyperlink link = new Hyperlink(run);
                 link.IsEnabled = false;
                 link.Foreground = Brushes.DarkBlue;
-                if (item.url != "")
+                try
                 {
-                    link.IsEnabled = true;
-                    link.RequestNavigate += (sender, args) => Process.Start(args.Uri.ToString());
-                    link.NavigateUri = new Uri(item.url);
+                    if (!string.IsNullOrEmpty(item.url))
+                    {
+                        link.IsEnabled = true;
+                        link.RequestNavigate += (sender, args) => Process.Start(args.Uri.ToString());
+                        link.NavigateUri = new Uri(item.url);
+                    }
+                }
+                catch (UriFormatException ex)
+                {
+                    link.IsEnabled = false;
+                    MessageBox.Show(ex.Message,
+                        "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 TextBlock text = new TextBlock();
                 text.FontSize = 24;

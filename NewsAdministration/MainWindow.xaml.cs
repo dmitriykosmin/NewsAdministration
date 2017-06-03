@@ -49,6 +49,7 @@ namespace NewsAdministration
 
         public async Task GetNews(DateTime date)
         {
+            Cursor = Cursors.Wait;
             string query = LinkToServer + "/Get";
             if (date != DateTime.Now.Date) query += "/" + date.ToString("MMddyyyy");
             try
@@ -68,8 +69,12 @@ namespace NewsAdministration
             }
             catch
             {
-                MessageBox.Show("Соединение с сервером не установлено. Пожалуйста, проверьте ваше интернет соединение.",
-                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Connection to the server is not established. Please check your internet connection.",
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Arrow;
             }
         }
 
@@ -91,7 +96,7 @@ namespace NewsAdministration
         private void SetNewsPriview()
         {
             NewsPreview.Items.Clear();
-            NewsPreview.Items.Add(new TextBlock(new Run("Быстрое переключение между новостями")));
+            NewsPreview.Items.Add(new TextBlock(new Run("Fast switching between news")));
             for (int i = 0; i < News.Count(); i++)
             {
                 Button temp = new Button()
@@ -145,7 +150,7 @@ namespace NewsAdministration
             {
                 CurrentDate = DateTime.Now.Date;
                 Date.SelectedDate = CurrentDate;
-                Thread.Sleep(5000);
+                Thread.Sleep(8000);
                 await GetNews(CurrentDate);
             }
         }
@@ -165,8 +170,8 @@ namespace NewsAdministration
         {
             if (NewsList.SelectedIndex == -1)
             {
-                MessageBox.Show("Выберите новость, которую хотите отредактировать.",
-                    "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Select the news you want to edit.",
+                    "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             var newsItem = News.ElementAt(NewsList.SelectedIndex);
@@ -174,7 +179,7 @@ namespace NewsAdministration
             bool? result = window.ShowDialog();
             if (result.Value)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(8000);
                 await GetNews(CurrentDate);
             }
         }
@@ -183,17 +188,17 @@ namespace NewsAdministration
         {
             if (NewsList.SelectedIndex == -1)
             {
-                MessageBox.Show("Выберите новость, которую хотите удалить.",
-                    "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Select the news you want to delete.",
+                    "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            var answer = MessageBox.Show("Вы действительно хотите удалить новость?",
-                "Подтвердите удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var answer = MessageBox.Show("Are you sure you want to delete selected news?",
+                "Confirm news deleting", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (answer == MessageBoxResult.Yes)
             {
                 var newsItem = News.ElementAt(NewsList.SelectedIndex);
                 Delete_NewsItem(newsItem);
-                Thread.Sleep(5000);
+                Thread.Sleep(8000);
                 await GetNews(CurrentDate);
             }
         }
@@ -214,9 +219,15 @@ namespace NewsAdministration
             }
             catch (Exception e)
             {
-                MessageBox.Show("При запросе к серверу возникла ошибка.\n\n" + e.Message,
-                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("An error occurred while sending request to the server.\n\n" + e.Message,
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void ChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+            Change_Password window = new Change_Password();
+            window.ShowDialog();
         }
     }
 }

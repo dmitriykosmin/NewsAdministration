@@ -55,8 +55,8 @@ namespace NewsAdministration
             }
             catch (Exception e)
             {
-                MessageBox.Show("При запросе к серверу возникла ошибка.\n\n" + e.Message,
-                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("An error occurred while sending request to the server.\n\n" + e.Message,
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsAdministration"
         mc:Ignorable="d"
-        Title="Добавить новость" Height="600" Width="800" FontFamily="Times New Roman" FontStyle="Italic" FontSize="18.667">
+        Title="Add news" Height="600" Width="800" FontFamily="Times New Roman" FontStyle="Italic" FontSize="18.667">
     <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Заголовок:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Headline:" VerticalAlignment="Top"/>
         <TextBox x:Name="Title" HorizontalAlignment="Stretch" Height="23" Margin="10,36,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Автор:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Author:" VerticalAlignment="Top"/>
         <TextBox x:Name="Author" HorizontalAlignment="Stretch" Height="23" Margin="10,90,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top"/>
         <TextBox x:Name="Description" HorizontalAlignment="Stretch" Height="276" Margin="10,139,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,420,0,0" TextWrapping="Wrap" Text="Ссылка на полную версию статьи (поле можно оставить пустым):" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,420,0,0" TextWrapping="Wrap" Text="Link to the full version of the article (this field can be left blank):" VerticalAlignment="Top"/>
         <TextBox x:Name="URL" HorizontalAlignment="Stretch" Height="23" Margin="10,442,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="10,470,0,0" TextWrapping="Wrap" Text="Ссылка на изображение для статьи (поле можно оставить пустым):" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="10,470,0,0" TextWrapping="Wrap" Text="Link to the image for the article (this field can be left blank):" VerticalAlignment="Top"/>
         <TextBox x:Name="URLToImage" HorizontalAlignment="Stretch" Height="23" Margin="10,491,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,9.6,10.4" VerticalAlignment="Bottom" Width="100" Click="Add_Click"/>
+        <Button x:Name="Add" Content="Add" HorizontalAlignment="Right" Margin="0,0,9.6,10.4" VerticalAlignment="Bottom" Width="100" Click="Add_Click"/>
     </Grid>
 </Window>

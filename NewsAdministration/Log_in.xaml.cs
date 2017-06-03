@@ -30,20 +30,20 @@ namespace NewsAdministration
         {
             var pairs = new List<KeyValuePair<string, string>>
                 {
-                    new KeyValuePair<string, string>( "grant_type", "password" ),
-                    new KeyValuePair<string, string>( "username", Login.Text),
-                    new KeyValuePair<string, string> ( "Password", Password.Password)
+                    new KeyValuePair<string, string>("grant_type", "password"),
+                    new KeyValuePair<string, string>("username", Login.Text),
+                    new KeyValuePair<string, string> ("Password", Password.Password)
                 };
             var content = new FormUrlEncodedContent(pairs);
             using (var client = new HttpClient())
             {
                 try
                 {
-                    var response = client.PostAsync(@"http://localhost:1848/Token", content).Result;
+                    var response = client.PostAsync("http://localhost:1848/Token", content).Result;
                     if (!response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Учётные данные были введены неправильно.",
-                            "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show("The credentials were entered incorrectly.",
+                            "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }
                     var result = response.Content.ReadAsStringAsync().Result;
@@ -54,8 +54,9 @@ namespace NewsAdministration
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Нет соединения с сервером.\n\n" + ex.Message,
-                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Connection to the server is not established. " +
+                        "Please check your internet connection.\n\n" + ex.Message,
+                        "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             }
